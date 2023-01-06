@@ -5,7 +5,12 @@
       
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the program, Here we are Find Maximum between Three Element");
+            
+            int A = 5;
+            int B = 15;
+            int C = 14;
+            int val= FindMaximum<int>.MaxIntNum(A,B,C);
+            Console.WriteLine("The greater num is " + val);
         }
     }
 }
