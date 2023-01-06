@@ -6,11 +6,11 @@
         public static void Main(string[] args)
         {
             
-            float A = 5.2F;
-            float B = 1.5F;
-            float C = 3.4F;
-            float val = FindMaximum<float>.MaxIntNum(A,B,C);
-            Console.WriteLine("The greater num is " + val);
+            string A = "Apple";
+            string B = "Peach";
+            string C = "Banana";
+            string val = FindMaximum<string>.MaxIntNum(A,B,C);
+            Console.WriteLine("The maximum String is " + val);
         }
     }
 }
