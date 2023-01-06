@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GenericsDemo
 {
-    public class FindMaximum<T>where T : IComparable
+    public class FindMaximum
     {
-        public static T MaxIntNum(T A,T B, T C)
+        public static int MaxIntNum(int A,int B,int C)
         {
             if(A.CompareTo(B) > 0 && A.CompareTo(C)>0 || 
                     A.CompareTo(B) >= 0 && A.CompareTo(C) > 0 || 
