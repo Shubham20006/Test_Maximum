@@ -6,10 +6,10 @@
         public static void Main(string[] args)
         {
             
-            int A = 15;
-            int B = 21;
-            int C = 33;
-            int val = FindMaximum.MaxIntNum(A,B,C);
+            float A = 15.2F;
+            float B = 29.6F;
+            float C = 18.4F;
+            float val = FindMaximum.MaxIntNum(A,B,C);
             Console.WriteLine("The maximum Number is " + val);
         }
     }
