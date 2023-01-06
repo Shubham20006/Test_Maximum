@@ -8,7 +8,7 @@ namespace GenericsDemo
 {
     public class FindMaximum
     {
-        public static float MaxIntNum(float A, float B, float C)
+        public static string MaxIntNum(string A, string B, string C)
         {
             if(A.CompareTo(B) > 0 && A.CompareTo(C)>0 || 
                     A.CompareTo(B) >= 0 && A.CompareTo(C) > 0 || 
