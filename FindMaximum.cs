@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace GenericsDemo
 {
     public class FindMaximum<T> where T:IComparable
     {
-        public T A, B, C;
+        public T A, B, C,Max;
         public FindMaximum(T A,T B, T C)
         {
             this.A = A;
@@ -17,8 +18,8 @@ namespace GenericsDemo
         }
         public static T MaxNum(T A, T B, T C)
         {
-            if(A.CompareTo(B) > 0 && A.CompareTo(C)>0 || 
-                    A.CompareTo(B) >= 0 && A.CompareTo(C) > 0 || 
+            if (A.CompareTo(B) > 0 && A.CompareTo(C) > 0 ||
+                    A.CompareTo(B) >= 0 && A.CompareTo(C) > 0 ||
                     A.CompareTo(B) > 0 && A.CompareTo(C) >= 0)
             {
                 return A;
@@ -38,16 +39,20 @@ namespace GenericsDemo
                 return C;
             }
             return default;
-        
-       
-            
-        
-    }
+        }
         public T MaxMethod()
         {
-            T Max = FindMaximum<T>.MaxNum(this.A, this.B, this.C);
+             Max = FindMaximum<T>.MaxNum(this.A, this.B, this.C);           
+            toPrint(Max);
             return Max;
-            
+
         }
-    }
+        public  void toPrint(T Max)
+        {
+            Console.WriteLine("Maximum is " + Max);
+        }
+       
+
+
+}
 }
